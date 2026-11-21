@@ -34,8 +34,8 @@ One weekly off per 7-day week (a leave or a closed day counts as that off); max 
 4. **Unavailable sole owner:** the gap is flagged per process and day, with who is unavailable and why, and a ranked backup (same pod, free that day first).
 5. **Conflicts:** mandatory (coverage, no assigned employee) are errors and block publishing; preferences and overload (more than 2 brands a day) are warnings. Nothing is silently fixed.
 6. **Automation vs human:** automated: offs, validation, suggestions. Human: leave approval, backup choice, publishing, overrides.
-7. **Doubling:** move to a database and API, replace the greedy pass with a constraint solver (OR-Tools CP-SAT), validate incrementally per changed day, add auth and roles.
-8. **One more week:** CP-SAT solver with fairness objective, alternative-plan comparison, auto-repair on leave, persistence, tests.
+7. **Doubling:**use a better database and data warehouse to process the information without causing additional chaos
+8. **One more week:**i would make the ui better make it more accesible to users and make the using process more simple for the user.
 
 ## Later additions
 - Day-specific minimum staffing (Brand/Process view, "Specific day")
