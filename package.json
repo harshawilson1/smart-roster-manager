@@ -1,0 +1,9 @@
+{
+  "name": "smart-roster-manager",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node tests/logic.test.js"
+  }
+}

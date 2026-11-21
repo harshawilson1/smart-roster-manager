@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Roster Manager</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+<div id="app">
+<h1>Smart Roster Manager</h1><div id="sum"></div>
+<div class="bar"><input type="month" id="mo" value="2026-12"><input id="hl" value="2026-12-25" title="Public holidays, comma separated"><select id="str"><option>Balanced</option><option>Preference-first</option><option>Fairness-first</option></select><button onclick="G()">Regenerate roster</button><button onclick="CMP()">Compare plans</button><button onclick="PUB()">Publish roster</button><button onclick="CSV()">Export CSV</button><button onclick="CO()">Auto-grant comp-offs</button><button onclick="localStorage.removeItem('rm1');location.reload()">Reset data</button><span id="pst"></span></div>
+<div id="tabs" class="bar"></div><div class="bar"><select id="vw" onchange="V()"><option value="company">Company</option><option value="pod">Pod</option><option value="brand">Brand</option><option value="process">Process</option><option value="employee">Employee</option></select><select id="fl" onchange="fl=this.value;R()"></select></div>
+<small>Tap a cell to toggle weekly off. W work · O weekly off · L leave · C comp-off · – closed. Red underline marks a public holiday.</small>
+<div id="main"></div><div id="x"></div><div id="cmp"></div>
+<div class="rl"><b>Handle a change</b><br><select id="ce"></select> <select id="ct"><option value="leaves">Leave</option><option value="comp">Comp-off</option></select> <input type="date" id="cd" value="2026-12-07"> <label><input type="checkbox" id="auto" checked> Auto-regenerate</label> <button onclick="ch()">Apply and re-validate</button><div id="msg"></div></div>
+<div class="rl"><b>Add to the team</b><br><input id="nn" placeholder="Employee name"> <select id="np"></select> <select id="nb"></select> <button onclick="addE()">Add employee</button><br><input id="bn" placeholder="New brand"> <select id="bc"><option value="365">365 days</option><option value="NH">Daily, holidays off</option><option value="SH">Sundays and holidays off</option></select> <button onclick="addB()">Add brand with CS process</button></div><textarea id="csv" style="width:100%;height:90px;display:none"></textarea><div id="iss"></div></div>
+<script src="src/data.js"></script>
+<script src="src/logic.js"></script>
+<script src="src/ui.js"></script>
+</body>
+</html>
